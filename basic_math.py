@@ -26,7 +26,7 @@ def get_greatest(number_list):
     """
     greatest_number = None
     temp = number_list[:]
-    temp.sort();
+    temp.sort()
     greatest_number = temp[-1]
     return greatest_number
 
@@ -50,7 +50,7 @@ def get_smallest(number_list):
     """
     smallest_number = None
     temp = number_list[:]
-    temp.sort();
+    temp.sort()
     smallest_number = temp[0]
     return smallest_number
 
@@ -100,10 +100,11 @@ def get_median(number_list):
             >>> bm.get_median(number_list2)
             35.5
     """
-    median = None
+    median = None; idx = None
     temp = number_list[:]
     temp.sort()
-    if len(temp)%2 == 0 : """리스트 개수가 짝수"--> 두개의 평균값"""
+    if len(temp)%2 == 0:
+        """리스트 개수가 짝수"--> 두개의 평균값"""
         idx = int(len(temp)/2)-1
         median = (temp[idx] + temp[idx+1])/2
     else :
